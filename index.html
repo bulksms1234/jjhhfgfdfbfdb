@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Udyog Aadhaar Registration Certificate | Minakshi Enterprise</title>
+    <!-- Font Awesome for icons (optional, for visual enhancement) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+        }
+
+        body {
+            background: #f0f4f8;
+            color: #1e293b;
+            line-height: 1.5;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 24px;
+            box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+        }
+
+        /* Government header style */
+        .gov-header {
+            background: linear-gradient(135deg, #0b3b6b, #1e5a8a);
+            color: white;
+            padding: 1.5rem 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 1rem;
+        }
+
+        .gov-header-left {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .emblem-placeholder {
+            width: 60px;
+            height: 60px;
+            background: #ffffff20;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            border: 2px solid #ffd966;
+        }
+
+        .gov-text h2 {
+            font-size: 1.6rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .gov-text p {
+            font-size: 0.85rem;
+            opacity: 0.9;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .msme-logo {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #ffd966;
+            letter-spacing: 2px;
+            background: #0a2f52;
+            padding: 0.2rem 1rem;
+            border-radius: 12px;
+            border: 1px solid #ffd966;
+        }
+
+        /* Udyog Aadhaar banner */
+        .ua-banner {
+            background: #0b3b6b;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem 2rem;
+            color: white;
+            border-bottom: 3px solid #ffd966;
+        }
+
+        .ua-banner .left-icon {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-weight: 500;
+        }
+
+        .ua-banner .left-icon i {
+            font-size: 2rem;
+            color: #ffd966;
+        }
+
+        .ua-banner .center-title {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .ua-banner .center-title span {
+            background: #ffd966;
+            color: #0b3b6b;
+            padding: 0.2rem 1rem;
+            border-radius: 40px;
+            font-size: 1.2rem;
+        }
+
+        .ua-banner .right-icons {
+            display: flex;
+            gap: 1rem;
+            font-size: 1.5rem;
+        }
+
+        /* Main content */
+        .main-content {
+            padding: 2rem;
+        }
+
+        /* Certificate card */
+        .certificate-card {
+            border: 2px solid #0b3b6b20;
+            border-radius: 18px;
+            background: #fafdff;
+            padding: 1.8rem;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.02);
+        }
+
+        .certificate-header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #0b3b6b40;
+            padding-bottom: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .certificate-header h1 {
+            font-size: 1.9rem;
+            font-weight: 700;
+            color: #0b3b6b;
+        }
+
+        .certificate-header .uam-badge {
+            background: #0b3b6b;
+            color: white;
+            padding: 0.4rem 1.2rem;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        /* Enterprise type table */
+        .type-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1.8rem;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .type-table th, .type-table td {
+            border: 1px solid #cbd5e1;
+            padding: 0.6rem 1rem;
+            text-align: center;
+            font-size: 0.95rem;
+        }
+
+        .type-table th {
+            background: #0b3b6b;
+            color: white;
+            font-weight: 600;
+        }
+
+        .type-table td {
+            background: #ffffff;
+        }
+
+        .type-table .highlight {
+            background: #ffd96640;
+            font-weight: 600;
+        }
+
+        .uam-number-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            background: #e6f0fa;
+            padding: 0.8rem 1.5rem;
+            border-radius: 40px;
+            margin-bottom: 1.8rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: #0b3b6b;
+            border: 1px solid #0b3b6b30;
+        }
+
+        .uam-number-row span {
+            background: #0b3b6b;
+            color: white;
+            padding: 0.3rem 1.2rem;
+            border-radius: 40px;
+            font-family: monospace;
+            letter-spacing: 1px;
+            font-size: 1.2rem;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 1.8rem;
+        }
+
+        .info-box {
+            background: white;
+            padding: 1rem 1.2rem;
+            border-radius: 14px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+        }
+
+        .info-box h3 {
+            font-size: 1rem;
+            color: #0b3b6b;
+            margin-bottom: 0.6rem;
+            border-bottom: 2px solid #ffd966;
+            padding-bottom: 0.3rem;
+            display: inline-block;
+        }
+
+        .info-box p {
+            font-size: 0.95rem;
+            margin-bottom: 0.25rem;
+            color: #1e293b;
+        }
+
+        .address-block {
+            background: #f1f7fe;
+            border-left: 5px solid #0b3b6b;
+            padding: 1rem 1.5rem;
+            border-radius: 12px;
+            margin-bottom: 1.8rem;
+            font-size: 0.98rem;
+        }
+
+        .address-block strong {
+            color: #0b3b6b;
+        }
+
+        .table-responsive {
+            overflow-x: auto;
+            margin: 1.5rem 0;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+
+        table.detail-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+            min-width: 600px;
+        }
+
+        table.detail-table th {
+            background: #0b3b6b;
+            color: white;
+            padding: 0.8rem 0.5rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        table.detail-table td {
+            border: 1px solid #d1d9e6;
+            padding: 0.7rem 0.5rem;
+            text-align: center;
+            background: white;
+        }
+
+        .ack-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            background: #f8fafc;
+            padding: 1.2rem 1.8rem;
+            border-radius: 14px;
+            margin: 1.8rem 0;
+            border: 1px dashed #0b3b6b80;
+        }
+
+        .ack-item {
+            font-weight: 500;
+        }
+
+        .ack-item span {
+            font-weight: 700;
+            color: #0b3b6b;
+            margin-left: 0.5rem;
+        }
+
+        .validity {
+            background: #fff7e6;
+            border-left: 6px solid #d97706;
+            padding: 1rem 1.8rem;
+            border-radius: 12px;
+            font-size: 1.05rem;
+            margin: 1.5rem 0;
+        }
+
+        .validity strong {
+            color: #b45309;
+        }
+
+        .disclaimer {
+            font-size: 0.85rem;
+            color: #475569;
+            background: #f1f5f9;
+            padding: 0.9rem 1.5rem;
+            border-radius: 40px;
+            text-align: center;
+            margin-top: 1.2rem;
+            font-style: italic;
+        }
+
+        /* Static Pages: Privacy, Terms, Contact */
+        .pages-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0 2rem;
+            border-top: 2px solid #e2e8f0;
+            padding-top: 2.5rem;
+        }
+
+        .page-card {
+            background: #ffffff;
+            border-radius: 18px;
+            padding: 1.8rem 1.5rem;
+            box-shadow: 0 8px 18px -8px rgba(0, 0, 0, 0.08);
+            border: 1px solid #e9eef4;
+            transition: transform 0.15s;
+        }
+
+        .page-card:hover {
+            transform: translateY(-3px);
+            border-color: #0b3b6b40;
+        }
+
+        .page-card h2 {
+            font-size: 1.4rem;
+            color: #0b3b6b;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .page-card h2 i {
+            color: #ffd966;
+            background: #0b3b6b;
+            padding: 0.4rem;
+            border-radius: 50%;
+            font-size: 1rem;
+            width: 2rem;
+            height: 2rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .page-card p, .page-card ul {
+            font-size: 0.9rem;
+            color: #334155;
+            margin-bottom: 0.8rem;
+        }
+
+        .page-card ul {
+            padding-left: 1.2rem;
+        }
+
+        .page-card li {
+            margin-bottom: 0.4rem;
+        }
+
+        .page-card .contact-line {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            margin: 0.6rem 0;
+            font-size: 0.92rem;
+            word-break: break-word;
+        }
+
+        .page-card .contact-line i {
+            color: #0b3b6b;
+            width: 1.2rem;
+            text-align: center;
+        }
+
+        /* Footer */
+        .footer {
+            background: #0b3b6b;
+            color: #e2e8f0;
+            text-align: center;
+            padding: 1.5rem 2rem;
+            font-size: 0.9rem;
+            border-top: 5px solid #ffd966;
+            margin-top: 1rem;
+        }
+
+        .footer a {
+            color: #ffd966;
+            text-decoration: none;
+            margin: 0 0.5rem;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .copyright {
+            margin-top: 0.8rem;
+            font-size: 0.8rem;
+            opacity: 0.8;
+        }
+
+        /* Responsive */
+        @media (max-width: 700px) {
+            .gov-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .ua-banner {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.8rem;
+            }
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+            .certificate-header h1 {
+                font-size: 1.4rem;
+            }
+            .main-content {
+                padding: 1.2rem;
+            }
+            .ack-section {
+                flex-direction: column;
+                gap: 0.6rem;
+            }
+            .uam-number-row {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Government Header -->
+        <div class="gov-header">
+            <div class="gov-header-left">
+                <div class="emblem-placeholder">
+                    <i class="fas fa-landmark"></i>
+                </div>
+                <div class="gov-text">
+                    <h2>भारत सरकार</h2>
+                    <p>Government of India</p>
+                    <p style="font-size:0.75rem; opacity:0.8; text-transform:none;">Ministry of Micro, Small & Medium Enterprises</p>
+                </div>
+            </div>
+            <div class="msme-logo">
+                <i class="fas fa-industry"></i> MSME
+            </div>
+        </div>
+
+        <!-- Udyog Aadhaar Banner -->
+        <div class="ua-banner">
+            <div class="left-icon">
+                <i class="fas fa-digital-tiling"></i>
+                <span>Digital India</span>
+            </div>
+            <div class="center-title">
+                <i class="fas fa-certificate"></i> उद्योग आधार <span>Udyog Aadhaar</span>
+            </div>
+            <div class="right-icons">
+                <i class="fas fa-qrcode"></i>
+                <i class="fas fa-check-circle"></i>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <!-- Certificate Card -->
+            <div class="certificate-card">
+                <div class="certificate-header">
+                    <h1>Udyog Aadhaar Registration Certificate</h1>
+                    <div class="uam-badge"><i class="fas fa-id-card"></i> UAM No. MH26D0171522</div>
+                </div>
+
+                <!-- Enterprise Type Table -->
+                <table class="type-table">
+                    <thead>
+                        <tr>
+                            <th>Type of Enterprise</th>
+                            <th>Micro</th>
+                            <th>Small</th>
+                            <th>Medium</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Manufacturing</strong></td>
+                            <td>A</td>
+                            <td>B</td>
+                            <td>C</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Services</strong></td>
+                            <td>D</td>
+                            <td>E</td>
+                            <td>F</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- UAM Number Highlight -->
+                <div class="uam-number-row">
+                    <span>UAM No. MH26D0171522</span>
+                    <span style="background:transparent; color:#0b3b6b; font-weight:700;">Udyog Aadhaar Number</span>
+                </div>
+
+                <!-- Enterprise Details Grid -->
+                <div class="info-grid">
+                    <div class="info-box">
+                        <h3>Name of Enterprise</h3>
+                        <p><strong>MINAKSHI</strong></p>
+                        <p style="font-size:0.85rem; color:#475569;">(Sakhare Wasti, Hinjawadi)</p>
+                    </div>
+                    <div class="info-box">
+                        <h3>Location of Plant</h3>
+                        <p>284, Sakhare Wasti, Taluka Mulshi, Hinjawadi, Pune - 411057, Maharashtra</p>
+                    </div>
+                </div>
+
+                <!-- Address block -->
+                <div class="address-block">
+                    <strong><i class="fas fa-map-pin"></i> Official Address of Enterprise:</strong><br>
+                    MINAKSHI, 284, SAKHARE WASTI, AT POST HINJAWADI, TALUKA MULSHI, DIST PUNE<br>
+                    <strong>District:</strong> PUNE &nbsp;|&nbsp; <strong>State:</strong> MAHARASHTRA &nbsp;|&nbsp; <strong>PIN:</strong> 411057<br>
+                    <strong>Mobile:</strong> 9225618450 &nbsp;|&nbsp; <strong>Email:</strong> ambikahomes03@gmail.com
+                </div>
+
+                <!-- Plant details table (from original) -->
+                <div class="table-responsive">
+                    <table class="detail-table">
+                        <thead>
+                            <tr>
+                                <th>SN</th>
+                                <th>Flat/Door/Block No.</th>
+                                <th>Name of Premises/Building</th>
+                                <th>Village</th>
+                                <th>Road/Street/Lane</th>
+                                <th>Area/Locality</th>
+                                <th>City</th>
+                                <th>Pin</th>
+                                <th>State</th>
+                                <th>District</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>284</td>
+                                <td>MINAKSHI</td>
+                                <td>SAKHARE WASTI</td>
+                                <td>TALUKA MULSHI</td>
+                                <td>HINJAWADI</td>
+                                <td>411057</td>
+                                <td>MAHARASHTRA</td>
+                                <td>PUNE</td>
+                                <td>PUNE</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Additional info (NIC Code) -->
+                <div style="margin: 1.5rem 0;">
+                    <h3 style="color:#0b3b6b; margin-bottom:0.5rem; font-size:1.1rem;">National Industry Classification Code</h3>
+                    <div class="table-responsive">
+                        <table class="detail-table">
+                            <thead>
+                                <tr>
+                                    <th>SN</th>
+                                    <th>NIC 2 Digit</th>
+                                    <th>NIC 4 Digit</th>
+                                    <th>NIC 5 Digit Code</th>
+                                    <th>Activity Type</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>68 - Real estate activities</td>
+                                    <td>6810 - Real estate activities with own or leased property</td>
+                                    <td>68100 - Real estate activities with own or leased property</td>
+                                    <td>Services</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Acknowledgement & Dates -->
+                <div class="ack-section">
+                    <div class="ack-item"><i class="fas fa-calendar-alt"></i> Date of Filing: <span>20/09/2019</span></div>
+                    <div class="ack-item"><i class="fas fa-print"></i> Date of Printing: <span>23/09/2026</span></div>
+                </div>
+
+                <!-- Validity -->
+                <div class="validity">
+                    <i class="fas fa-clock"></i> This Udyog Aadhaar Memorandum (UAM) Certificate is Valid Till <strong>30/06/2022</strong>.
+                </div>
+
+                <!-- Disclaimer -->
+                <div class="disclaimer">
+                    <i class="fas fa-exclamation-circle"></i> Disclaimer: This is a computer generated statement, no signature required. Printed from udyogaadhaar.gov.in
+                </div>
+            </div>
+
+            <!-- Static Pages: Privacy Policy, Terms & Conditions, Contact -->
+            <div class="pages-section">
+                <!-- Privacy Policy -->
+                <div class="page-card">
+                    <h2><i class="fas fa-shield-alt"></i> Privacy Policy</h2>
+                    <p>This website displays the Udyog Aadhaar Registration Certificate for <strong>MINAKSHI</strong> (UAM: MH26D0171522). We respect your privacy and are committed to protecting any personal information shared.</p>
+                    <ul>
+                        <li>Information displayed is as per government records and is publicly available for verification.</li>
+                        <li>No user data is collected, stored, or processed through this static page.</li>
+                        <li>External links (if any) are not governed by this policy.</li>
+                        <li>For any privacy concerns, please contact the enterprise using the details provided.</li>
+                    </ul>
+                    <p style="font-size:0.85rem; color:#475569;">Last updated: 23/09/2026</p>
+                </div>
+
+                <!-- Terms & Conditions -->
+                <div class="page-card">
+                    <h2><i class="fas fa-file-contract"></i> Terms & Conditions</h2>
+                    <p>By accessing this certificate page, you agree to the following:</p>
+                    <ul>
+                        <li>The information presented is a replica of the Udyog Aadhaar Memorandum issued by the Government of India.</li>
+                        <li>This website is for informational and verification purposes only.</li>
+                        <li>Unauthorized use, alteration, or misrepresentation of this certificate is strictly prohibited.</li>
+                        <li>The enterprise is not liable for any decisions made based on this displayed information.</li>
+                        <li>All content is subject to change as per government updates.</li>
+                    </ul>
+                    <p style="font-size:0.85rem; color:#475569;">Effective date: 23/09/2026</p>
+                </div>
+
+                <!-- Contact Page -->
+                <div class="page-card">
+                    <h2><i class="fas fa-address-book"></i> Contact Us</h2>
+                    <div class="contact-line"><i class="fas fa-building"></i> MINAKSHI (Enterprise)</div>
+                    <div class="contact-line"><i class="fas fa-map-marker-alt"></i> 284, Sakhare Wasti, At Post Hinjawadi, Taluka Mulshi, Dist Pune, Maharashtra - 411057</div>
+                    <div class="contact-line"><i class="fas fa-phone-alt"></i> +91 9225618450</div>
+                    <div class="contact-line"><i class="fas fa-envelope"></i> ambikahomes03@gmail.com</div>
+                    <div class="contact-line"><i class="fas fa-id-card"></i> UAM: MH26D0171522</div>
+                    <div class="contact-line"><i class="fas fa-clock"></i> Mon-Sat: 10:00 AM – 6:00 PM</div>
+                    <p style="margin-top:1rem; font-size:0.85rem;">For official queries regarding Udyog Aadhaar, visit <a href="https://udyogaadhaar.gov.in" target="_blank" style="color:#0b3b6b;">udyogaadhaar.gov.in</a></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer with Copyright -->
+        <div class="footer">
+            <div>
+                <a href="#"><i class="fas fa-home"></i> Home</a> |
+                <a href="#"><i class="fas fa-shield-alt"></i> Privacy Policy</a> |
+                <a href="#"><i class="fas fa-file-contract"></i> Terms & Conditions</a> |
+                <a href="#"><i class="fas fa-address-book"></i> Contact</a>
+            </div>
+            <div class="copyright">
+                <i class="far fa-copyright"></i> 2026 MINAKSHI (Udyog Aadhaar MH26D0171522). All rights reserved. <br>
+                This is a computer-generated certificate. No signature required. Printed from udyogaadhaar.gov.in
+            </div>
+        </div>
+    </div>
+</body>
+</html>
